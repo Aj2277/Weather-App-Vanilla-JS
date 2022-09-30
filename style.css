@@ -1,0 +1,130 @@
+@charset "UTF-8";
+body {
+  background: linear-gradient(rgb(135, 225, 255), rgb(3, 151, 249));
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.title {
+  font-size: 50px;
+}
+
+.cur-location {
+  font-size: 30px;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  color: white;
+  -webkit-text-stroke: 1px black;
+}
+
+.temperature {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 40px;
+  color: white;
+}
+.temperature .degree {
+  font-size: 50px;
+}
+.temperature .degree::after {
+  content: "°f";
+  font-weight: lighter;
+  font-size: 45px;
+}
+.temperature span {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+.temperature .condition {
+  text-transform: capitalize;
+}
+
+#input {
+  background: none;
+  color: white;
+  font-size: 18px;
+  padding: 10px 10px 10px 5px;
+  display: block;
+  width: 400px;
+  border: none;
+  border-radius: 0;
+  border-bottom: 1px solid white;
+  outline: none;
+}
+
+::-moz-placeholder {
+  color: white;
+  opacity: 1;
+}
+
+:-ms-input-placeholder {
+  color: white;
+  opacity: 1;
+}
+
+::placeholder {
+  color: white;
+  opacity: 1;
+}
+
+.search-btn {
+  width: 400px;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 5px 8px 10px #2d2d2d;
+  height: 35px;
+  margin: 10px;
+  font-size: 17px;
+  color: rgb(3, 151, 249);
+}
+
+#err-message {
+  color: red;
+  font-size: 17px;
+  text-align: center;
+}
+
+.location {
+  height: 15vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+#new-weather-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  align-items: center;
+}
+#new-weather-container .new-weather {
+  text-align: center;
+  background: #f8fbfb;
+  border: none;
+  border-radius: 25px;
+  box-shadow: 5px 10px 25px #2d2d2d;
+  width: 200px;
+  height: 300px;
+  margin: 10px;
+  font-size: 18px;
+  color: rgb(3, 151, 249);
+}
+#new-weather-container h1 {
+  font-size: 50px;
+}
+#new-weather-container h1::after {
+  content: "°f";
+  font-weight: lighter;
+  font-size: 45px;
+}
+
+@media screen and (max-width: 880px) {
+  .new-weather-container {
+    background: green;
+  }
+}/*# sourceMappingURL=style.css.map */

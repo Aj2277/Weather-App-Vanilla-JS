@@ -1,0 +1,128 @@
+$width: 400px;
+$shadowClr: #2d2d2d;
+$white: #ffff;
+
+@mixin degreeAfter {
+    content: '°f';
+    font-weight: lighter;
+    font-size: 45px;
+}
+
+body {
+    background: linear-gradient(rgb(135, 225, 255), rgb(3, 151, 249));
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.title{
+    font-size: 50px;
+}
+
+ .cur-location {
+    font-size: 30px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: $white;
+    -webkit-text-stroke: 1px black;
+}
+
+.temperature {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 40px;
+    color: $white;
+    .degree {
+        font-size: 50px;
+    }
+    .degree::after {
+        @include degreeAfter();
+    }
+    span {
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+    .condition {
+        text-transform: capitalize;
+    }
+}
+
+#input {
+    background: none;
+    color: $white;
+    font-size: 18px;
+    padding: 10px 10px 10px 5px;
+    display: block;
+    width: $width;
+    border: none;
+    border-radius: 0;
+    border-bottom: 1px solid $white;
+    outline: none;
+}
+::placeholder{
+    color: $white;
+    opacity: 1;
+}
+
+.search-btn {
+    width: $width;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 5px 8px 10px $shadowClr;
+    height: 35px;
+    margin: 10px;
+    font-size: 17px;
+    color: rgb(3, 151, 249);
+}
+
+#err-message {
+    color: red;
+    font-size: 17px;
+    text-align: center;
+}
+
+.location {
+    height: 15vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#new-weather-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    align-items: center;
+    .new-weather {
+        text-align: center;
+        // display: flex;
+        // justify-content: center;
+        // align-items: center;
+        // flex-direction: column;
+        background: #f8fbfb;
+        border: none;
+        border-radius: 25px;
+        box-shadow: 5px 10px 25px $shadowClr;
+        width: 200px;
+        height: 300px;
+        margin: 10px;   
+        font-size: 18px;
+        color: rgb(3, 151, 249);
+    }
+    h1{
+        font-size: 50px;
+    }
+    h1::after{
+     @include degreeAfter();
+    }
+}
+
+@media screen and (max-width: 880px) {
+    .new-weather-container {
+        background: green;
+    }
+}
